@@ -1,0 +1,19 @@
+<InputCollector>:
+    orientation: "vertical"
+    TextInput:
+        id: input_area
+        hint_text: "PASTE HERE"
+        size_hint_y: None
+        height: 200
+    BoxLayout:
+        size_hint_y: None
+        height: 50
+        Button:
+            text: "GENERATE"
+            on_press: root.generate_data(self)
+        Button:
+            text: "DELETE"
+            on_press: root.delete_text(self)
+    Label:
+        id: message_label
+        text: ""
